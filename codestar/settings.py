@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-&yj1n83lc0afm$+9t05tk&5f41@jqjrk6#+qxc&&logk4^&0^-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com',
+ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1', 'localhost'
 ]
 
 
@@ -132,4 +132,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeinstitute-ide.net/",
+    "https://*.herokuapp.com"
+]
 
